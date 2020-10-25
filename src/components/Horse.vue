@@ -1,15 +1,15 @@
 <template>
   <div class="main-container">
     <v-row v-if="currentHorse">
-      <v-col :cols="2"></v-col>
-      <v-col :cols="4">
+      <v-col :cols="0" :md="2"></v-col>
+      <v-col :cols="12" :md="4">
         <v-img
           :src="currentHorse.horse_img"
-          height="650px"
+          max-height="650px"
           position="top"
         ></v-img>
       </v-col>
-      <v-col :cols="4">
+      <v-col :md="4" :cols="12">
         <div class="text-h2">
           {{ currentHorse.short_name }}
         </div>
@@ -24,20 +24,20 @@
         <div class="text-body-1 my-4">
           <span class="font-weight-bold">Owner:</span> {{ currentHorse.owner }}
         </div>
-        <v-tabs  color="brown" v-model="tab" align-with-title :method="splitFeed(horseFeed, horseSupplements)">
-          <v-tabs-slider color="brown"></v-tabs-slider>
+        <v-tabs color="brown" v-model="tab" :method="splitFeed(horseFeed, horseSupplements)">
+          <v-tabs-slider class="d-flex justify-start" show color="brown"></v-tabs-slider>
           <v-tab
-            ><v-icon dark right class="mx-1"> mdi-white-balance-sunny </v-icon>
+            ><v-icon dark right> mdi-white-balance-sunny </v-icon>
             AM Feed</v-tab
           >
           <v-tab
-            ><v-icon dark right class="mx-1"> mdi-weather-night </v-icon> PM
+            ><v-icon dark right> mdi-weather-night </v-icon> PM
             Feed</v-tab
           >
-          <v-tab
-            ><v-icon dark right class="mx-1"> mdi-flower </v-icon> Turnout
+          <!-- <v-tab
+            ><v-icon dark right> mdi-flower </v-icon> Turnout
             Schedule</v-tab
-          >
+          > -->
         </v-tabs>
         <v-tabs-items v-model="tab">
           <v-tab-item>

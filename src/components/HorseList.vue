@@ -8,7 +8,7 @@
     >
       <v-img
         class="white--text align-end"
-        height="500px"
+        max-height="500px"
         position="top"
         :src="horse.horseImage"
       >

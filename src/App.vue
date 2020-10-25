@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-app-bar app dark class="brown darken-4">
-      <div class="d-flex align-center mr-2">
+      <v-toolbar-title>
         Lucky Fox Farms
-      </div>
+      </v-toolbar-title>
 
       <v-btn to="/horses" text>
         Horses
