@@ -5,7 +5,7 @@
       <v-col :cols="12" :md="4">
         <v-img
           :src="currentHorse.horse_img"
-          max-height="650px"
+          max-height="651px"
           position="top"
         ></v-img>
       </v-col>
